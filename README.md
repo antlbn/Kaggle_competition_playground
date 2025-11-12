@@ -1,18 +1,24 @@
-# Kaggle Competition Playground
+# Kaggle Playground: Feature Reduction Experiment
 
-This repository contains code and resources related to various Kaggle competitions.
+This notebook explores the effect of feature quantity versus model performance.
 
-## Getting Started
+Starting from a dataset with a large number of additional engineered features, I gradually reduced the feature set to identify which variables truly contribute to predictive accuracy.
 
-To explore or contribute to the repository, clone it to your local environment.
+## Goal
+To understand how feature selection influences model stability and generalization in a regression/classification task from the Kaggle Playground Series.
 
-```
-git clone https://github.com/antlbn/Kaggle_competition_playground.git
-cd Kaggle_competition_playground
-```
+## Approach
+1. Initial stage – maximal feature set, including all engineered and derived columns.  
+2. Iterative reduction – step-by-step removal of weak or redundant features using correlation analysis, feature importance, and validation results.  
+3. Evaluation – comparison of model metrics (MAE / RMSE / accuracy, depending on the task) after each reduction step.
 
-Feel free to open issues or submit pull requests to enhance the project!
+## Insights
+- More features do not necessarily mean better performance.  
+- A smaller, well-chosen subset can improve consistency and reduce overfitting.  
+- Clear feature structure simplifies further model tuning.
 
-## License
+## Files
+- `road-accidents.ipynb` – main notebook with full workflow.  
+- `requirements.txt` – dependencies (optional).
 
-This repository is licensed under the MIT License.
+Part of my ongoing exploration of Kaggle Playground competitions and practical ML experimentation.
